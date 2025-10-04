@@ -16,14 +16,16 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "package_info_plus", path: "../.packages/package_info_plus"),
-        .package(name: "geolocator_apple", path: "../.packages/geolocator_apple")
+        .package(name: "geolocator_apple", path: "../.packages/geolocator_apple"),
+        .package(name: "flutter_qiblah", path: "../.packages/flutter_qiblah")
     ],
     targets: [
         .target(
             name: "FlutterGeneratedPluginSwiftPackage",
             dependencies: [
                 .product(name: "package-info-plus", package: "package_info_plus"),
-                .product(name: "geolocator-apple", package: "geolocator_apple")
+                .product(name: "geolocator-apple", package: "geolocator_apple"),
+                .product(name: "flutter-qiblah", package: "flutter_qiblah")
             ]
         )
     ]

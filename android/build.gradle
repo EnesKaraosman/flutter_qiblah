@@ -9,6 +9,7 @@ buildscript {
     }
 
     dependencies {
+        // AGP 8.6.0 supports 16KB page size by default
         classpath 'com.android.tools.build:gradle:8.6.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
@@ -25,7 +26,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 35
     namespace "ml.medyas.flutter_qiblah"
 
     sourceSets {
@@ -46,6 +47,15 @@ android {
 
     kotlinOptions {
         jvmTarget = '17'
+    }
+    
+    // Ensure 16KB page size compatibility
+    // AGP 8.5.1+ automatically handles 16KB alignment for native libraries
+    packaging {
+        jniLibs {
+            // Keep uncompressed for optimal performance on 16KB devices
+            useLegacyPackaging = false
+        }
     }
 }
 

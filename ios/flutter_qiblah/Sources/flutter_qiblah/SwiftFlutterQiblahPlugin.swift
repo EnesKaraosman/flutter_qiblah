@@ -4,10 +4,11 @@ import CoreLocation
 import CoreMotion
 import simd
 
-public class SwiftFlutterQiblahPlugin: NSObject, FlutterPlugin {
+@objc(FlutterQiblahPlugin)
+public class FlutterQiblahPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
     let channel = FlutterMethodChannel(name: "ml.medyas.flutter_qiblah", binaryMessenger: registrar.messenger())
-    let instance = SwiftFlutterQiblahPlugin()
+    let instance = FlutterQiblahPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
     
     // Register compass event channel

@@ -2,7 +2,9 @@
 
 [![pub package](https://img.shields.io/pub/v/flutter_qiblah.svg)](https://pub.dev/packages/flutter_qiblah) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
+## Compatibility
 
+✅ **Android 16KB Page Size Support**: This package is fully compatible with Google Play's 16KB page size requirement for Android 15+ devices (mandatory from November 1st, 2025).
 
 ## Getting Started
 
